@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -20,12 +24,18 @@
   --gamba-ui-input-background-hover: #11111d;
 }
 
-body, input, button, textarea, pre {
-  font-family: 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+body,
+input,
+button,
+textarea,
+pre {
+  font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   font-size: 16px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
 }
 
