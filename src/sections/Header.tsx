@@ -40,9 +40,15 @@ const StyledHeader = styled.div`
 
 const Logo = styled(NavLink)`
   height: 80px;
-  margin: 0 50px;
+  margin: 0 20px;
   & > img {
     height: 100%;
+  }
+`;
+
+const ResponsiveBonus = styled(Bonus)`
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -91,9 +97,9 @@ export default function Header() {
           }}
         >
           {pool.jackpotBalance > 0 && (
-            <Bonus onClick={() => setJackpotHelp(true)}>
+            <ResponsiveBonus onClick={() => setJackpotHelp(true)}>
               <TokenValue amount={pool.jackpotBalance} />
-            </Bonus>
+            </ResponsiveBonus>
           )}
           {balance.bonusBalance > 0 && (
             <Bonus onClick={() => setBonusHelp(true)}>
